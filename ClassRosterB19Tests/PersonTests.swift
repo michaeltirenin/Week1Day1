@@ -13,6 +13,10 @@ import UIKit
 class PersonTests: XCTestCase {
     
     var person = Person(firstName: "Russell", lastName: "Wilson", picture: UIImage(named: "blankface.jpeg"))
+    
+    var classRoster = ["Person1", "Person2", "Person3"]
+    
+    var classRosterFromPList = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("ClassRoster", ofType: "plist"))
 
     override func setUp() {
         super.setUp()
@@ -48,5 +52,13 @@ class PersonTests: XCTestCase {
         var person = Person(firstName: first, lastName: last, picture: UIImage(named: "blankface.jpeg"  ))
         
         XCTAssertEqual(person.fullName(), first + last, "full name is not matching")
+    }
+    
+    func testArrayOfPersonsCreation() {
+        XCTAssertNotNil(classRoster, "array of persons cannot be created")
+    }
+    
+    func testArrayOfPersonsFromPListCreation() {
+        XCTAssertNotNil(classRosterFromPList, "array of persons cannot be created")
     }
 }

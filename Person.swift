@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Person {
+class Person : NSObject {
     
     var firstName : String
     var lastName : String
@@ -29,16 +29,3 @@ class Person {
         return self.firstName + self.lastName
     }
 }
-
-/*
-John Clem
-Brad Johnson
-Victor Adu
-Kirby Shabaga
-Collin Atherton
-Jeff Gayle
-Dan Hoang
-Mike Tirenin
-Alex Rice
-Leonardo Lee
-*/

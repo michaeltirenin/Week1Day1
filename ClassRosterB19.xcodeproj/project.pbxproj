@@ -17,6 +17,8 @@
 		F2910E20197D8B6400EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
 		F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
 		F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
+		F2DBCF55197DC588002B41AD /* ClassRoster.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF54197DC588002B41AD /* ClassRoster.plist */; };
+		F2DBCF56197DC588002B41AD /* ClassRoster.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF54197DC588002B41AD /* ClassRoster.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 		F2910E1C197D89C600EBA181 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		F2910E1E197D8AC600EBA181 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F2DBCF51197DAE08002B41AD /* blankface.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blankface.jpeg; sourceTree = "<group>"; };
+		F2DBCF54197DC588002B41AD /* ClassRoster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ClassRoster.plist; path = ../ClassRosterB19/ClassRoster.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F2910E0E197D877A00EBA181 /* Info.plist */,
+				F2DBCF54197DC588002B41AD /* ClassRoster.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DBCF55197DC588002B41AD /* ClassRoster.plist in Resources */,
 				F2910E02197D877A00EBA181 /* Main.storyboard in Resources */,
 				F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */,
 				F2910E04197D877A00EBA181 /* Images.xcassets in Resources */,
@@ -235,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DBCF56197DC588002B41AD /* ClassRoster.plist in Resources */,
 				F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
