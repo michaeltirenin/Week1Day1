@@ -28,10 +28,10 @@ class ClassRosterB19Tests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
-            for i in 0...1000 {
-                var newPerson = Person(firstName: "John", lastName: "Clem")
-                print(newPerson)
-            }
+//            for i in 0...1000 {
+//                var newPerson = Person(firstName: "John", lastName: "Clem")
+//                print(newPerson)
+//            }
         }
     }
     

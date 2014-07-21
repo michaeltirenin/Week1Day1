@@ -15,6 +15,8 @@
 		F2910E1D197D89C600EBA181 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1C197D89C600EBA181 /* PersonTests.swift */; };
 		F2910E1F197D8AC600EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
 		F2910E20197D8B6400EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
+		F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
+		F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterB19Tests.swift; sourceTree = "<group>"; };
 		F2910E1C197D89C600EBA181 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		F2910E1E197D8AC600EBA181 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F2DBCF51197DAE08002B41AD /* blankface.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blankface.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 				F2910DF9197D877A00EBA181 /* ClassRosterB19 */,
 				F2910E0C197D877A00EBA181 /* ClassRosterB19Tests */,
 				F2910DF8197D877A00EBA181 /* Products */,
+				F2DBCF51197DAE08002B41AD /* blankface.jpeg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,7 +88,6 @@
 				F2910E1B197D879100EBA181 /* View */,
 				F2910E1A197D878B00EBA181 /* Controller */,
 				F2910DFC197D877A00EBA181 /* AppDelegate.swift */,
-				F2910E00197D877A00EBA181 /* Main.storyboard */,
 				F2910E03197D877A00EBA181 /* Images.xcassets */,
 				F2910DFA197D877A00EBA181 /* Supporting Files */,
 			);
@@ -137,6 +140,7 @@
 		F2910E1B197D879100EBA181 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F2910E00197D877A00EBA181 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -222,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2910E02197D877A00EBA181 /* Main.storyboard in Resources */,
+				F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */,
 				F2910E04197D877A00EBA181 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				F2910E15197D877A00EBA181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2910E16197D877A00EBA181 /* Build configuration list for PBXNativeTarget "ClassRosterB19Tests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				F2910E18197D877A00EBA181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
