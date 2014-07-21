@@ -12,6 +12,9 @@
 		F2910E02197D877A00EBA181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2910E00197D877A00EBA181 /* Main.storyboard */; };
 		F2910E04197D877A00EBA181 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2910E03197D877A00EBA181 /* Images.xcassets */; };
 		F2910E10197D877A00EBA181 /* ClassRosterB19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */; };
+		F2910E1D197D89C600EBA181 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1C197D89C600EBA181 /* PersonTests.swift */; };
+		F2910E1F197D8AC600EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
+		F2910E20197D8B6400EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 		F2910E09197D877A00EBA181 /* ClassRosterB19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterB19Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2910E0E197D877A00EBA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterB19Tests.swift; sourceTree = "<group>"; };
+		F2910E1C197D89C600EBA181 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		F2910E1E197D8AC600EBA181 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +80,10 @@
 		F2910DF9197D877A00EBA181 /* ClassRosterB19 */ = {
 			isa = PBXGroup;
 			children = (
+				F2910E19197D878200EBA181 /* Model */,
+				F2910E1B197D879100EBA181 /* View */,
+				F2910E1A197D878B00EBA181 /* Controller */,
 				F2910DFC197D877A00EBA181 /* AppDelegate.swift */,
-				F2910DFE197D877A00EBA181 /* ViewController.swift */,
 				F2910E00197D877A00EBA181 /* Main.storyboard */,
 				F2910E03197D877A00EBA181 /* Images.xcassets */,
 				F2910DFA197D877A00EBA181 /* Supporting Files */,
@@ -96,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */,
+				F2910E1C197D89C600EBA181 /* PersonTests.swift */,
 				F2910E0D197D877A00EBA181 /* Supporting Files */,
 			);
 			path = ClassRosterB19Tests;
@@ -107,6 +115,30 @@
 				F2910E0E197D877A00EBA181 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2910E19197D878200EBA181 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2910E1E197D8AC600EBA181 /* Person.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F2910E1A197D878B00EBA181 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2910DFE197D877A00EBA181 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F2910E1B197D879100EBA181 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2910E1F197D8AC600EBA181 /* Person.swift in Sources */,
 				F2910DFF197D877A00EBA181 /* ViewController.swift in Sources */,
 				F2910DFD197D877A00EBA181 /* AppDelegate.swift in Sources */,
 			);
@@ -217,6 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2910E20197D8B6400EBA181 /* Person.swift in Sources */,
+				F2910E1D197D89C600EBA181 /* PersonTests.swift in Sources */,
 				F2910E10197D877A00EBA181 /* ClassRosterB19Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
