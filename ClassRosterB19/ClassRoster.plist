@@ -2,15 +2,85 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Victor Adu</string>
-	<string>Collin Atherton</string>
-	<string>John Clem</string>
-	<string>Jeff Gayle</string>
-	<string>Dan Hoang</string>
-	<string>Brad Johnson</string>
-	<string>Leonardo Lee</string>
-	<string>Alex Rice</string>
-	<string>Kirby Shabaga</string>
-	<string>Mike Tirenin (.plist)</string>
+	<dict>
+		<key>firstName</key>
+		<string>Victor</string>
+		<key>lastName</key>
+		<string>Adu</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Collin</string>
+		<key>lastName</key>
+		<string>Atherton</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>John</string>
+		<key>lastName</key>
+		<string>Clem</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Jeff</string>
+		<key>lastName</key>
+		<string>Gayle</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Dan</string>
+		<key>lastName</key>
+		<string>Hoang</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Brad</string>
+		<key>lastName</key>
+		<string>Johnson</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Leonardo</string>
+		<key>lastName</key>
+		<string>Lee</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Alex</string>
+		<key>lastName</key>
+		<string>Rice</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Kirby</string>
+		<key>lastName</key>
+		<string>Shabaga</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Mike</string>
+		<key>lastName</key>
+		<string>Tirenin</string>
+		<key>picture</key>
+		<string>blankface.jpeg</string>
+	</dict>
 </array>
 </plist>
