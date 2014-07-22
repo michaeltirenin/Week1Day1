@@ -8,15 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		F2910DFD197D877A00EBA181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910DFC197D877A00EBA181 /* AppDelegate.swift */; };
-		F2910DFF197D877A00EBA181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910DFE197D877A00EBA181 /* ViewController.swift */; };
+		F2910DFF197D877A00EBA181 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910DFE197D877A00EBA181 /* PeopleViewController.swift */; };
 		F2910E02197D877A00EBA181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2910E00197D877A00EBA181 /* Main.storyboard */; };
 		F2910E04197D877A00EBA181 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2910E03197D877A00EBA181 /* Images.xcassets */; };
 		F2910E10197D877A00EBA181 /* ClassRosterB19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */; };
 		F2910E1D197D89C600EBA181 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1C197D89C600EBA181 /* PersonTests.swift */; };
 		F2910E1F197D8AC600EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
 		F2910E20197D8B6400EBA181 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910E1E197D8AC600EBA181 /* Person.swift */; };
-		F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
-		F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF51197DAE08002B41AD /* blankface.jpeg */; };
+		F297C414197EC01B0064A27A /* alexrice.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C409197EC01B0064A27A /* alexrice.png */; };
+		F297C415197EC01B0064A27A /* blankface.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40A197EC01B0064A27A /* blankface.png */; };
+		F297C416197EC01B0064A27A /* bradJohnson.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40B197EC01B0064A27A /* bradJohnson.png */; };
+		F297C417197EC01B0064A27A /* collinatherton.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40C197EC01B0064A27A /* collinatherton.png */; };
+		F297C418197EC01B0064A27A /* danhoang.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40D197EC01B0064A27A /* danhoang.png */; };
+		F297C419197EC01B0064A27A /* jeffgayle.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40E197EC01B0064A27A /* jeffgayle.png */; };
+		F297C41A197EC01B0064A27A /* johnclem.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C40F197EC01B0064A27A /* johnclem.png */; };
+		F297C41B197EC01B0064A27A /* kirbyshabaga.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C410197EC01B0064A27A /* kirbyshabaga.png */; };
+		F297C41C197EC01B0064A27A /* leonardolee.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C411197EC01B0064A27A /* leonardolee.png */; };
+		F297C41D197EC01B0064A27A /* miketirenin.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C412197EC01B0064A27A /* miketirenin.png */; };
+		F297C41E197EC01B0064A27A /* victoradu.png in Resources */ = {isa = PBXBuildFile; fileRef = F297C413197EC01B0064A27A /* victoradu.png */; };
+		F297C420197EE7860064A27A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C41F197EE7860064A27A /* DetailViewController.swift */; };
 		F2DBCF55197DC588002B41AD /* ClassRoster.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF54197DC588002B41AD /* ClassRoster.plist */; };
 		F2DBCF56197DC588002B41AD /* ClassRoster.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2DBCF54197DC588002B41AD /* ClassRoster.plist */; };
 /* End PBXBuildFile section */
@@ -35,7 +45,7 @@
 		F2910DF7197D877A00EBA181 /* ClassRosterB19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterB19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2910DFB197D877A00EBA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2910DFC197D877A00EBA181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2910DFE197D877A00EBA181 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2910DFE197D877A00EBA181 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		F2910E01197D877A00EBA181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2910E03197D877A00EBA181 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2910E09197D877A00EBA181 /* ClassRosterB19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterB19Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +53,19 @@
 		F2910E0F197D877A00EBA181 /* ClassRosterB19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterB19Tests.swift; sourceTree = "<group>"; };
 		F2910E1C197D89C600EBA181 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		F2910E1E197D8AC600EBA181 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		F2DBCF51197DAE08002B41AD /* blankface.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blankface.jpeg; sourceTree = "<group>"; };
-		F2DBCF54197DC588002B41AD /* ClassRoster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ClassRoster.plist; path = ../ClassRosterB19/ClassRoster.plist; sourceTree = "<group>"; };
+		F297C409197EC01B0064A27A /* alexrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alexrice.png; sourceTree = "<group>"; };
+		F297C40A197EC01B0064A27A /* blankface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankface.png; sourceTree = "<group>"; };
+		F297C40B197EC01B0064A27A /* bradJohnson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bradJohnson.png; sourceTree = "<group>"; };
+		F297C40C197EC01B0064A27A /* collinatherton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collinatherton.png; sourceTree = "<group>"; };
+		F297C40D197EC01B0064A27A /* danhoang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danhoang.png; sourceTree = "<group>"; };
+		F297C40E197EC01B0064A27A /* jeffgayle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jeffgayle.png; sourceTree = "<group>"; };
+		F297C40F197EC01B0064A27A /* johnclem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = johnclem.png; sourceTree = "<group>"; };
+		F297C410197EC01B0064A27A /* kirbyshabaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kirbyshabaga.png; sourceTree = "<group>"; };
+		F297C411197EC01B0064A27A /* leonardolee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leonardolee.png; sourceTree = "<group>"; };
+		F297C412197EC01B0064A27A /* miketirenin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miketirenin.png; sourceTree = "<group>"; };
+		F297C413197EC01B0064A27A /* victoradu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = victoradu.png; sourceTree = "<group>"; };
+		F297C41F197EE7860064A27A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2DBCF54197DC588002B41AD /* ClassRoster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ClassRoster.plist; path = ClassRosterB19/ClassRoster.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +92,6 @@
 				F2910DF9197D877A00EBA181 /* ClassRosterB19 */,
 				F2910E0C197D877A00EBA181 /* ClassRosterB19Tests */,
 				F2910DF8197D877A00EBA181 /* Products */,
-				F2DBCF51197DAE08002B41AD /* blankface.jpeg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +113,7 @@
 				F2910DFC197D877A00EBA181 /* AppDelegate.swift */,
 				F2910E03197D877A00EBA181 /* Images.xcassets */,
 				F2910DFA197D877A00EBA181 /* Supporting Files */,
+				F297C408197EC01B0064A27A /* photos */,
 			);
 			path = ClassRosterB19;
 			sourceTree = "<group>";
@@ -119,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				F2910E0E197D877A00EBA181 /* Info.plist */,
-				F2DBCF54197DC588002B41AD /* ClassRoster.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -128,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F2910E1E197D8AC600EBA181 /* Person.swift */,
+				F2DBCF54197DC588002B41AD /* ClassRoster.plist */,
 			);
 			name = Model;
 			path = ..;
@@ -136,7 +157,8 @@
 		F2910E1A197D878B00EBA181 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F2910DFE197D877A00EBA181 /* ViewController.swift */,
+				F2910DFE197D877A00EBA181 /* PeopleViewController.swift */,
+				F297C41F197EE7860064A27A /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -147,6 +169,25 @@
 				F2910E00197D877A00EBA181 /* Main.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		F297C408197EC01B0064A27A /* photos */ = {
+			isa = PBXGroup;
+			children = (
+				F297C409197EC01B0064A27A /* alexrice.png */,
+				F297C40A197EC01B0064A27A /* blankface.png */,
+				F297C40B197EC01B0064A27A /* bradJohnson.png */,
+				F297C40C197EC01B0064A27A /* collinatherton.png */,
+				F297C40D197EC01B0064A27A /* danhoang.png */,
+				F297C40E197EC01B0064A27A /* jeffgayle.png */,
+				F297C40F197EC01B0064A27A /* johnclem.png */,
+				F297C410197EC01B0064A27A /* kirbyshabaga.png */,
+				F297C411197EC01B0064A27A /* leonardolee.png */,
+				F297C412197EC01B0064A27A /* miketirenin.png */,
+				F297C413197EC01B0064A27A /* victoradu.png */,
+			);
+			name = photos;
+			path = ../photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +271,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DBCF55197DC588002B41AD /* ClassRoster.plist in Resources */,
+				F297C414197EC01B0064A27A /* alexrice.png in Resources */,
 				F2910E02197D877A00EBA181 /* Main.storyboard in Resources */,
-				F2DBCF52197DAE08002B41AD /* blankface.jpeg in Resources */,
+				F297C41E197EC01B0064A27A /* victoradu.png in Resources */,
+				F297C41A197EC01B0064A27A /* johnclem.png in Resources */,
+				F297C41C197EC01B0064A27A /* leonardolee.png in Resources */,
+				F297C41D197EC01B0064A27A /* miketirenin.png in Resources */,
+				F297C417197EC01B0064A27A /* collinatherton.png in Resources */,
+				F297C418197EC01B0064A27A /* danhoang.png in Resources */,
+				F297C419197EC01B0064A27A /* jeffgayle.png in Resources */,
+				F297C41B197EC01B0064A27A /* kirbyshabaga.png in Resources */,
+				F297C415197EC01B0064A27A /* blankface.png in Resources */,
+				F297C416197EC01B0064A27A /* bradJohnson.png in Resources */,
 				F2910E04197D877A00EBA181 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DBCF56197DC588002B41AD /* ClassRoster.plist in Resources */,
-				F2DBCF53197DAE08002B41AD /* blankface.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2910E1F197D8AC600EBA181 /* Person.swift in Sources */,
-				F2910DFF197D877A00EBA181 /* ViewController.swift in Sources */,
+				F2910DFF197D877A00EBA181 /* PeopleViewController.swift in Sources */,
 				F2910DFD197D877A00EBA181 /* AppDelegate.swift in Sources */,
+				F297C420197EE7860064A27A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

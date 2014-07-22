@@ -7,80 +7,80 @@
 		<string>Victor</string>
 		<key>lastName</key>
 		<string>Adu</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>victoradu</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Collin</string>
 		<key>lastName</key>
 		<string>Atherton</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>collinatherton</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>John</string>
 		<key>lastName</key>
 		<string>Clem</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>johnclem</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Jeff</string>
 		<key>lastName</key>
 		<string>Gayle</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>jeffgayle</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Dan</string>
 		<key>lastName</key>
 		<string>Hoang</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>danhoang</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Brad</string>
 		<key>lastName</key>
 		<string>Johnson</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>bradjohnson</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Leonardo</string>
 		<key>lastName</key>
 		<string>Lee</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>leonardolee</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Alex</string>
 		<key>lastName</key>
 		<string>Rice</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>alexrice</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Kirby</string>
 		<key>lastName</key>
 		<string>Shabaga</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>kirbyshabaga</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
 		<string>Mike</string>
 		<key>lastName</key>
 		<string>Tirenin</string>
-		<key>picture</key>
-		<string>blankface.jpeg</string>
+		<key>imageName</key>
+		<string>miketirenin</string>
 	</dict>
 </array>
 </plist>
