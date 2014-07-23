@@ -110,7 +110,6 @@
 				F2910E19197D878200EBA181 /* Model */,
 				F2910E1B197D879100EBA181 /* View */,
 				F2910E1A197D878B00EBA181 /* Controller */,
-				F2910DFC197D877A00EBA181 /* AppDelegate.swift */,
 				F2910E03197D877A00EBA181 /* Images.xcassets */,
 				F2910DFA197D877A00EBA181 /* Supporting Files */,
 				F297C408197EC01B0064A27A /* photos */,
@@ -159,6 +158,7 @@
 			children = (
 				F2910DFE197D877A00EBA181 /* PeopleViewController.swift */,
 				F297C41F197EE7860064A27A /* DetailViewController.swift */,
+				F2910DFC197D877A00EBA181 /* AppDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

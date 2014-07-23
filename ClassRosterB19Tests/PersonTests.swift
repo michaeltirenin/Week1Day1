@@ -12,9 +12,9 @@ import UIKit
 
 class PersonTests: XCTestCase {
     
-//    var person = Person(firstName: "Russell", lastName: "Wilson", picture: UIImage(named: "blankface"))
+    var person = Person(firstName: "Russell", lastName: "Wilson", imageName: "blankface", twitterHandle: "@ruswil", githubHandle: "ruwilson")
     
-    var person = Person(firstName: "Russell", lastName: "Wilson")
+//    var person = Person(firstName: "Russell", lastName: "Wilson")
 
     var classRoster = ["Person1", "Person2", "Person3"]
     
@@ -38,9 +38,20 @@ class PersonTests: XCTestCase {
         XCTAssertNotNil(person.firstName, "person's first name property cannot be created")
     }
     
-    func testPicture() {
-//        person.picture = UIImage(named: "blankface.jpeg")
-        XCTAssertNotNil(person.picture, "person's picture property cannot be created")
+    func testLastName() {
+        XCTAssertNotNil(person.lastName, "person's last name property cannot be created")
+    }
+    
+    func testImageName() {
+        XCTAssertNotNil(person.imageName, "person's picture property cannot be created")
+    }
+    
+    func testTwitterHandle() {
+        XCTAssertNotNil(person.twitterHandle, "person's twitter handle property cannot be created")
+    }
+    
+    func testGithubHandle() {
+        XCTAssertNotNil(person.githubHandle, "person's github handle property cannot be created")
     }
     
     func testPersonInit() {
@@ -52,7 +63,7 @@ class PersonTests: XCTestCase {
         var last = "Baldwin"
         
 //        var person = Person(firstName: first, lastName: last, picture: UIImage(named: "blankface"  ))
-        var person = Person(firstName: first, lastName: last)
+        var person = Person(firstName: "Russell", lastName: "Wilson", imageName: "blankface", twitterHandle: "@ruswil", githubHandle: "ruwilson")
         
         XCTAssertEqual(person.fullName(), first + last, "full name is not matching")
     }

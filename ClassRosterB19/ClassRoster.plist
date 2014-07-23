@@ -9,6 +9,10 @@
 		<string>Adu</string>
 		<key>imageName</key>
 		<string>victoradu</string>
+		<key>twitterHandle</key>
+		<string>@victoradu</string>
+		<key>githubHandle</key>
+		<string>victoradu</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -16,6 +20,10 @@
 		<key>lastName</key>
 		<string>Atherton</string>
 		<key>imageName</key>
+		<string>collinatherton</string>
+		<key>twitterHandle</key>
+		<string>@collinatherton</string>
+		<key>githubHandle</key>
 		<string>collinatherton</string>
 	</dict>
 	<dict>
@@ -25,6 +33,10 @@
 		<string>Clem</string>
 		<key>imageName</key>
 		<string>johnclem</string>
+		<key>twitterHandle</key>
+		<string>@johnclem</string>
+		<key>githubHandle</key>
+		<string>johnclem</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -32,6 +44,10 @@
 		<key>lastName</key>
 		<string>Gayle</string>
 		<key>imageName</key>
+		<string>jeffgayle</string>
+		<key>twitterHandle</key>
+		<string>@jeffgayle</string>
+		<key>githubHandle</key>
 		<string>jeffgayle</string>
 	</dict>
 	<dict>
@@ -41,6 +57,10 @@
 		<string>Hoang</string>
 		<key>imageName</key>
 		<string>danhoang</string>
+		<key>twitterHandle</key>
+		<string>@danhoang</string>
+		<key>githubHandle</key>
+		<string>danhoang</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -48,6 +68,10 @@
 		<key>lastName</key>
 		<string>Johnson</string>
 		<key>imageName</key>
+		<string>bradjohnson</string>
+		<key>twitterHandle</key>
+		<string>@bradjohnson</string>
+		<key>githubHandle</key>
 		<string>bradjohnson</string>
 	</dict>
 	<dict>
@@ -57,6 +81,10 @@
 		<string>Lee</string>
 		<key>imageName</key>
 		<string>leonardolee</string>
+		<key>twitterHandle</key>
+		<string>@leonardolee</string>
+		<key>githubHandle</key>
+		<string>leonardolee</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -64,6 +92,10 @@
 		<key>lastName</key>
 		<string>Rice</string>
 		<key>imageName</key>
+		<string>alexrice</string>
+		<key>twitterHandle</key>
+		<string>@alexrice</string>
+		<key>githubHandle</key>
 		<string>alexrice</string>
 	</dict>
 	<dict>
@@ -73,6 +105,10 @@
 		<string>Shabaga</string>
 		<key>imageName</key>
 		<string>kirbyshabaga</string>
+		<key>twitterHandle</key>
+		<string>@kirbyshabaga</string>
+		<key>githubHandle</key>
+		<string>kirbyshabaga</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -81,6 +117,10 @@
 		<string>Tirenin</string>
 		<key>imageName</key>
 		<string>miketirenin</string>
+		<key>twitterHandle</key>
+		<string>@michaeltirenin</string>
+		<key>githubHandle</key>
+		<string>michaeltirenin</string>
 	</dict>
 </array>
 </plist>

@@ -8,13 +8,24 @@
 
 import UIKit
 
-class PeopleViewController: UIViewController, UITableViewDataSource {
+class PeopleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var people = Person.arrayOfPersonsFromPList()
     
     @IBOutlet var tableView: UITableView! // possible bug in beta4 - had to declare as strong
     // optional since not set immediately
-                            
+    
+    @IBAction func addPersonBarButtonItem(sender: UIBarButtonItem) {
+
+        let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
+
+        let newPerson = Person(firstName: "", lastName: "", imageName: "", twitterHandle: "", githubHandle: "")
+        people.append(newPerson)
+        detail.person = newPerson
+
+        self.navigationController.pushViewController(detail, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        arrayOfPersons()
@@ -76,26 +87,34 @@ class PeopleViewController: UIViewController, UITableViewDataSource {
         } else {
             cell.imageView.image = UIImage(named: personForRow.imageName)
         }
-
-//        cell.imageView.image = UIImage(named: personForRow.imageName)
         
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        
+//        if segue.identifier == "ShowDetail" {
+//            let destination = segue.destinationViewController as DetailViewController
+//            destination.person = people[tableView!.indexPathForSelectedRow().row]
+////            println(tableView!.indexPathForSelectedRow().row)
+//
+//        } else if segue.identifier == "ShowNewPerson" {
+//            let destination = segue.destinationViewController as DetailViewController
+//            let newPerson = Person(firstName: "", lastName: "", imageName: "", twitterHandle: "", githubHandle: "")
+//            people.append(newPerson)
+//            destination.person = newPerson
+//        }
+//    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        println(indexPath.row)
         
-        if segue.identifier == "ShowDetail" {
-            let destination = segue.destinationViewController as DetailViewController
-            destination.person = people[tableView!.indexPathForSelectedRow().row]
-//            println(tableView!.indexPathForSelectedRow().row)
-
-        } else if segue.identifier == "ShowNewPerson" {
-            let destination = segue.destinationViewController as DetailViewController
-            let newPerson = Person(firstName: "", lastName: "", imageName: "")
-            people.append(newPerson)
-            destination.person = newPerson
+        let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
+        
+        detail.person = self.people[indexPath.row]
+        
+        if self.navigationController {
+            self.navigationController.pushViewController(detail, animated: true)
         }
-        
-        
     }
 }

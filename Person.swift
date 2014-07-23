@@ -14,15 +14,18 @@ class Person : NSObject {
     var firstName : String
     var lastName : String
     
-//    var picture : UIImage?
-    
     var imageName : String
     
-    init(firstName : String, lastName : String, imageName : String) {
+    var twitterHandle : String
+    var githubHandle : String
+    
+    init(firstName : String, lastName : String, imageName : String, twitterHandle : String, githubHandle : String) {
         
         self.firstName = firstName
         self.lastName = lastName
         self.imageName = imageName
+        self.twitterHandle = twitterHandle
+        self.githubHandle = githubHandle
         
         // this isn't necessary (to init) since it either takes a value or is nil
         // self.picture = picture
@@ -44,8 +47,10 @@ class Person : NSObject {
                 let firstName = person["firstName"] as String
                 let lastName = person["lastName"] as String
                 let imageName = person["imageName"] as String
+                let twitterHandle = person["twitterHandle"] as String
+                let githubHandle = person["githubHandle"] as String
                 // let image = UIImage(contentsOfPath:)
-                roster.append(Person(firstName: firstName, lastName: lastName, imageName: imageName))
+                roster.append(Person(firstName: firstName, lastName: lastName, imageName: imageName, twitterHandle: twitterHandle, githubHandle: githubHandle))
             }
         }
         return roster
