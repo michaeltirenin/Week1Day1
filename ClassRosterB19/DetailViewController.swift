@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITraitEnvironment {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -18,6 +18,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     @IBOutlet weak var pictureImageView: UIImageView!
     
+
+    @IBOutlet weak var firstNameCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     var person : Person!
     
     override func viewDidLoad() {
@@ -126,5 +130,30 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
+        println(self.traitCollection.verticalSizeClass.toRaw())
+        
+        println(self.imageViewTopConstraint.constant)
+        println(self.imageViewCenterConstraint.constant)
+        println(self.firstNameCenterConstraint.constant)
+        
+        if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
+            
+            self.imageViewTopConstraint.constant = 10.0
+            self.imageViewCenterConstraint.constant = 130
+            self.firstNameCenterConstraint.constant = -140
+            
+        }
+        else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
+            
+            self.imageViewTopConstraint.constant = 260
+            self.imageViewCenterConstraint.constant = 0
+            self.firstNameCenterConstraint.constant = 0
+            
+        }
+    }
+    
+    
     
 }
