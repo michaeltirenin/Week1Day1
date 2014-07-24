@@ -58,6 +58,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         person.lastName = lastNameTextField.text
         person.twitterHandle = twitterHandleTextField.text
         person.githubHandle = githubHandleTextField.text
+//        person.imageName = pictureImageView.image
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {
@@ -106,8 +107,24 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     @IBAction func showImagePickerBarButton(sender: UIBarButtonItem) {
         
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
+//        println("did finish picking")
+        var pickedImage = info[UIImagePickerControllerOriginalImage] as UIImage
+//        pictureImageView.image = UIImage(named: pickedImage)
+        pictureImageView.image = pickedImage
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
