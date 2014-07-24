@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -103,4 +103,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    @IBAction func showImagePickerBarButton(sender: UIBarButtonItem) {
+        
+    }
+
+    
+    
 }
