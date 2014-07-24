@@ -20,8 +20,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
 
     @IBOutlet weak var firstNameCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    
     var person : Person!
     
     override func viewDidLoad() {
@@ -132,28 +134,26 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
     
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
-        println(self.traitCollection.verticalSizeClass.toRaw())
+//        println(self.traitCollection.verticalSizeClass.toRaw())
         
-        println(self.imageViewTopConstraint.constant)
+        println(self.imageViewTopConstraint.constant) // used as 'return to compact state' value
         println(self.imageViewCenterConstraint.constant)
         println(self.firstNameCenterConstraint.constant)
-        
+        println(self.firstNameTopConstraint.constant)
+
         if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
             
-            self.imageViewTopConstraint.constant = 10.0
-            self.imageViewCenterConstraint.constant = 130
-            self.firstNameCenterConstraint.constant = -140
+            self.imageViewTopConstraint.constant = 50.0
+            self.imageViewCenterConstraint.constant = 110
+            self.firstNameCenterConstraint.constant = -110
+            self.firstNameTopConstraint.constant = 35
             
-        }
-        else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
+        } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
             
-            self.imageViewTopConstraint.constant = 260
+            self.imageViewTopConstraint.constant = 19
             self.imageViewCenterConstraint.constant = 0
             self.firstNameCenterConstraint.constant = 0
-            
+            self.firstNameTopConstraint.constant = 176
         }
     }
-    
-    
-    
 }
