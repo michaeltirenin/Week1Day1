@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--People View Controller-->
@@ -117,24 +118,6 @@
                                     <outlet property="delegate" destination="9mS-2r-dg2" id="6Rc-Bl-7ef"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-PY-KQw">
-                                <rect key="frame" x="20" y="305" width="280" height="234"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="243" id="tcT-tO-qWF">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="225"/>
-                                    </constraint>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tcT-tO-qWF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="tcT-tO-qWF"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Twitter Handle" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jct-px-4Nl">
                                 <rect key="frame" x="20" y="193" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -163,6 +146,27 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hgx-lj-Nbs"/>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-PY-KQw">
+                                <rect key="frame" x="20" y="305" width="280" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="69Q-PY-KQw" secondAttribute="height" multiplier="8:5" id="rFZ-H3-PY5"/>
+                                    <constraint firstAttribute="height" constant="243" id="tcT-tO-qWF">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="225"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rFZ-H3-PY5"/>
+                                        <exclude reference="tcT-tO-qWF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="rFZ-H3-PY5"/>
+                                        <include reference="tcT-tO-qWF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -171,7 +175,7 @@
                             <constraint firstItem="jct-px-4Nl" firstAttribute="top" secondItem="uFu-IT-LQt" secondAttribute="bottom" constant="19" id="Eoq-Ri-awm"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="YTW-hE-jMN" secondAttribute="leading" id="Lqi-eo-v9b"/>
                             <constraint firstItem="V0c-me-X9M" firstAttribute="top" secondItem="lje-Xo-Upq" secondAttribute="bottom" constant="75" id="NcP-vV-F2m">
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                             </constraint>
                             <constraint firstItem="YTW-hE-jMN" firstAttribute="top" secondItem="jct-px-4Nl" secondAttribute="bottom" constant="19" id="TR3-7T-59N"/>
                             <constraint firstItem="69Q-PY-KQw" firstAttribute="leading" secondItem="YTW-hE-jMN" secondAttribute="leading" id="abe-B5-gg6"/>
@@ -182,7 +186,7 @@
                             <constraint firstAttribute="bottom" secondItem="lRU-da-TgA" secondAttribute="bottom" id="g3k-xg-JrG"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="uFu-IT-LQt" secondAttribute="leading" id="kMN-CM-AfJ"/>
                             <constraint firstItem="69Q-PY-KQw" firstAttribute="top" secondItem="YTW-hE-jMN" secondAttribute="bottom" constant="33" id="lzj-tc-szP">
-                                <variation key="heightClass=regular-widthClass=compact" constant="19"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
                             </constraint>
                             <constraint firstItem="lRU-da-TgA" firstAttribute="leading" secondItem="ZuD-xF-XCp" secondAttribute="leading" id="rov-Ti-hzN"/>
                             <constraint firstItem="uFu-IT-LQt" firstAttribute="top" secondItem="V0c-me-X9M" secondAttribute="bottom" constant="19" id="ssJ-Ef-WkS"/>
