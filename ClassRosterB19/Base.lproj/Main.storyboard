@@ -38,7 +38,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="blankface.png" id="CJy-8o-WPx">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="blankface.png" id="CJy-8o-WPx">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -149,9 +149,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-PY-KQw">
                                 <rect key="frame" x="20" y="305" width="280" height="234"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="69Q-PY-KQw" secondAttribute="height" multiplier="8:5" id="rFZ-H3-PY5"/>
+                                    <constraint firstAttribute="width" secondItem="69Q-PY-KQw" secondAttribute="height" multiplier="8:5" id="rFZ-H3-PY5">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-72"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="243" id="tcT-tO-qWF">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="225"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
@@ -175,7 +177,7 @@
                             <constraint firstItem="jct-px-4Nl" firstAttribute="top" secondItem="uFu-IT-LQt" secondAttribute="bottom" constant="19" id="Eoq-Ri-awm"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="YTW-hE-jMN" secondAttribute="leading" id="Lqi-eo-v9b"/>
                             <constraint firstItem="V0c-me-X9M" firstAttribute="top" secondItem="lje-Xo-Upq" secondAttribute="bottom" constant="75" id="NcP-vV-F2m">
-                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="21"/>
                             </constraint>
                             <constraint firstItem="YTW-hE-jMN" firstAttribute="top" secondItem="jct-px-4Nl" secondAttribute="bottom" constant="19" id="TR3-7T-59N"/>
                             <constraint firstItem="69Q-PY-KQw" firstAttribute="leading" secondItem="YTW-hE-jMN" secondAttribute="leading" id="abe-B5-gg6"/>
@@ -186,7 +188,7 @@
                             <constraint firstAttribute="bottom" secondItem="lRU-da-TgA" secondAttribute="bottom" id="g3k-xg-JrG"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="uFu-IT-LQt" secondAttribute="leading" id="kMN-CM-AfJ"/>
                             <constraint firstItem="69Q-PY-KQw" firstAttribute="top" secondItem="YTW-hE-jMN" secondAttribute="bottom" constant="33" id="lzj-tc-szP">
-                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="21"/>
                             </constraint>
                             <constraint firstItem="lRU-da-TgA" firstAttribute="leading" secondItem="ZuD-xF-XCp" secondAttribute="leading" id="rov-Ti-hzN"/>
                             <constraint firstItem="uFu-IT-LQt" firstAttribute="top" secondItem="V0c-me-X9M" secondAttribute="bottom" constant="19" id="ssJ-Ef-WkS"/>
