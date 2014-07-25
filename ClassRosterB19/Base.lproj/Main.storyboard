@@ -20,28 +20,54 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="3rF-DM-Hcx" detailTextLabel="bvr-8P-B28" imageView="CJy-8o-WPx" rowHeight="86" style="IBUITableViewCellStyleSubtitle" id="5Pw-QG-c9R">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="90" id="5Pw-QG-c9R" customClass="PersonTableViewCell" customModule="ClassRosterB19" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Pw-QG-c9R" id="DMl-Uy-4cl">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3rF-DM-Hcx">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mh-Sn-jo1">
+                                                    <rect key="frame" x="20" y="13" width="47" height="63"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1to-nb-9dq">
+                                                    <rect key="frame" x="81" y="23" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvr-8P-B28">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-on-Yte">
+                                                    <rect key="frame" x="81" y="41" width="96" height="26"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="blankface.png" id="CJy-8o-WPx">
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="twitterHandlel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="my7-lb-mLC">
+                                                    <rect key="frame" x="162" y="25" width="103" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.49746236310000003" green="0.57350593809999995" blue="0.57350593809999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="githubHandlel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44T-Qe-rHG">
+                                                    <rect key="frame" x="162" y="44" width="103" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.49746236310000003" green="0.57350593809999995" blue="0.57350593809999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="b99-Q6-Ttk">
+                                                    <rect key="frame" x="270" y="30" width="12" height="12"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="githublogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AdQ-Mq-RSg">
+                                                    <rect key="frame" x="270" y="49" width="12" height="12"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="firstNameLabel" destination="1to-nb-9dq" id="qFK-cU-0H4"/>
+                                            <outlet property="githubHandleLabel" destination="44T-Qe-rHG" id="BwA-gM-H0l"/>
+                                            <outlet property="lastNameLabel" destination="3Qt-on-Yte" id="JVE-MZ-6ys"/>
+                                            <outlet property="pictureImageView" destination="4Mh-Sn-jo1" id="Vp4-80-puU"/>
+                                            <outlet property="twitterHandleLabel" destination="my7-lb-mLC" id="Ste-gb-cSV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -104,10 +130,10 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-PY-KQw">
-                                <rect key="frame" x="212" y="39" width="176" height="137"/>
+                                <rect key="frame" x="249" y="39" width="103" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="b2e-si-nif"/>
-                                    <constraint firstAttribute="width" constant="176" id="sru-LJ-Gxo"/>
+                                    <constraint firstAttribute="width" constant="103" id="sru-LJ-Gxo"/>
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="295" width="360" height="270"/>
@@ -173,6 +199,20 @@
                                     <outlet property="delegate" destination="9mS-2r-dg2" id="6Rc-Bl-7ef"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="avT-Iu-KAj">
+                                <rect key="frame" x="181" y="299" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="YtA-1l-GCp"/>
+                                    <constraint firstAttribute="height" constant="20" id="h0E-lW-Hdz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githublogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mKh-Hf-BKU">
+                                <rect key="frame" x="181" y="348" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1qZ-wh-Iv1"/>
+                                    <constraint firstAttribute="width" constant="20" id="bj6-NI-1av"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -186,11 +226,15 @@
                             <constraint firstItem="V0c-me-X9M" firstAttribute="trailing" secondItem="uFu-IT-LQt" secondAttribute="trailing" id="Nxj-Lb-rbR"/>
                             <constraint firstAttribute="centerX" secondItem="V0c-me-X9M" secondAttribute="centerX" id="R9b-N7-TtY"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="top" secondItem="uFu-IT-LQt" secondAttribute="bottom" constant="19" id="XIm-HI-3xg"/>
+                            <constraint firstItem="YTW-hE-jMN" firstAttribute="leading" secondItem="mKh-Hf-BKU" secondAttribute="trailing" constant="11" id="YST-3y-JR2"/>
                             <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="YTW-hE-jMN" secondAttribute="leading" id="ZNV-jC-L3A"/>
                             <constraint firstItem="69Q-PY-KQw" firstAttribute="top" secondItem="lje-Xo-Upq" secondAttribute="bottom" constant="19" id="ZxY-jO-Qau"/>
+                            <constraint firstItem="avT-Iu-KAj" firstAttribute="top" secondItem="jct-px-4Nl" secondAttribute="top" constant="5" id="cFo-by-ELy"/>
                             <constraint firstItem="uFu-IT-LQt" firstAttribute="top" secondItem="V0c-me-X9M" secondAttribute="bottom" constant="19" id="fit-hO-P0C"/>
                             <constraint firstItem="V0c-me-X9M" firstAttribute="leading" secondItem="uFu-IT-LQt" secondAttribute="leading" id="hbL-yV-3cY"/>
                             <constraint firstItem="YTW-hE-jMN" firstAttribute="trailing" secondItem="jct-px-4Nl" secondAttribute="trailing" id="pfu-pT-0Qd"/>
+                            <constraint firstItem="mKh-Hf-BKU" firstAttribute="top" secondItem="YTW-hE-jMN" secondAttribute="top" constant="5" id="qv9-aM-cU2"/>
+                            <constraint firstItem="jct-px-4Nl" firstAttribute="leading" secondItem="avT-Iu-KAj" secondAttribute="trailing" constant="11" id="uIg-vi-NL2"/>
                             <constraint firstItem="D47-gm-2DU" firstAttribute="leading" secondItem="ZuD-xF-XCp" secondAttribute="leading" id="xmD-72-dY5"/>
                         </constraints>
                     </view>
@@ -212,6 +256,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blankface.png" width="200" height="150"/>
+        <image name="githublogo.png" width="30" height="30"/>
+        <image name="twitterlogo.png" width="30" height="30"/>
     </resources>
 </document>

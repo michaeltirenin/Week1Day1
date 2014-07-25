@@ -18,7 +18,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     @IBOutlet weak var pictureImageView: UIImageView!
     
-
+// outlets of constraints; used to split view (move objects) in landscape mode
     @IBOutlet weak var firstNameCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
@@ -54,8 +54,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
 //       self.pictureImageView!.layer.cornerRadius = 0.5 * self.pictureImageView!.frame.width
         self.pictureImageView!.layer.cornerRadius = 10
         self.pictureImageView!.layer.masksToBounds = true
-        self.pictureImageView!.layer.borderWidth = 1
-        self.pictureImageView!.layer.borderColor = UIColor.blueColor().CGColor
+        self.pictureImageView!.layer.borderWidth = 1.5
+        self.pictureImageView!.layer.borderColor = UIColor.grayColor().CGColor
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -68,17 +68,29 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {
-        
-        let currentWidth = self.view.bounds.width
-        let currentHeight = self.view.bounds.height
-//        let newY = self.view.bounds.origin.y + textField.frame.origin.y - 100
-        let newY = 0 + textField.frame.origin.y - 100
-        let currentX = self.view.bounds.origin.x
-        
-        UIView.animateWithDuration(0.3, animations:{ () -> Void
-            in
-            self.view.bounds = CGRect(x: currentX, y: newY, width: currentWidth, height: currentHeight)
-            })
+        if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
+            let currentWidth = self.view.bounds.width
+            let currentHeight = self.view.bounds.height
+            //        let newY = self.view.bounds.origin.y + textField.frame.origin.y - 100
+            let newY = 0 + textField.frame.origin.y - 132
+            let currentX = self.view.bounds.origin.x
+            
+            UIView.animateWithDuration(0.3, animations:{ () -> Void
+                in
+                self.view.bounds = CGRect(x: currentX, y: newY, width: currentWidth, height: currentHeight)
+                })
+        } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
+            let currentWidth = self.view.bounds.width
+            let currentHeight = self.view.bounds.height
+            //        let newY = self.view.bounds.origin.y + textField.frame.origin.y - 100
+            let newY = 0 + textField.frame.origin.y - 65
+            let currentX = self.view.bounds.origin.x
+            
+            UIView.animateWithDuration(0.3, animations:{ () -> Void
+                in
+                self.view.bounds = CGRect(x: currentX, y: newY, width: currentWidth, height: currentHeight)
+                })
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField!) {
@@ -133,19 +145,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+// used to translate items via constraint constants
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
 //        println(self.traitCollection.verticalSizeClass.toRaw())
         
-        println(self.imageViewTopConstraint.constant) // used as 'return to compact state' value
-        println(self.imageViewCenterConstraint.constant)
-        println(self.firstNameCenterConstraint.constant)
-        println(self.firstNameTopConstraint.constant)
+//        println(self.imageViewTopConstraint.constant) // used as 'return to compact state' value
+//        println(self.imageViewCenterConstraint.constant)
+//        println(self.firstNameCenterConstraint.constant)
+//        println(self.firstNameTopConstraint.constant)
 
         if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
             
             self.imageViewTopConstraint.constant = 50.0
-            self.imageViewCenterConstraint.constant = 110
-            self.firstNameCenterConstraint.constant = -110
+            self.imageViewCenterConstraint.constant = 130
+            self.firstNameCenterConstraint.constant = -90
             self.firstNameTopConstraint.constant = 35
             
         } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {

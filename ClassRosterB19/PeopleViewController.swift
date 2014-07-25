@@ -74,19 +74,27 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonTableViewCell
         
         let personForRow = people[indexPath.row]
-        cell.textLabel.text = personForRow.firstName
-        cell.detailTextLabel.text = personForRow.lastName
+        cell.firstNameLabel.text = personForRow.firstName
+        cell.lastNameLabel.text = personForRow.lastName
 //        cell.imageView.image = UIImage(named: "miketirenin")
 //        cell.imageView.image = UIImage(named: personForRow.imageName)
         
         if personForRow.imageName == "" {
-            cell.imageView.image = UIImage(named: "blankface.png")
+            cell.pictureImageView.image = UIImage(named: "blankface.png")
         } else {
-            cell.imageView.image = UIImage(named: personForRow.imageName)
+            cell.pictureImageView.image = UIImage(named: personForRow.imageName)
         }
+        
+        cell.pictureImageView.layer.cornerRadius = 10
+        cell.pictureImageView.layer.masksToBounds = true
+        cell.pictureImageView.layer.borderWidth = 1.2
+        cell.pictureImageView!.layer.borderColor = UIColor.grayColor().CGColor
+        
+        cell.twitterHandleLabel.text = personForRow.twitterHandle
+        cell.githubHandleLabel.text = personForRow.githubHandle
         
         return cell
     }
@@ -107,7 +115,7 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 //    }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        println(indexPath.row)
+//        println(indexPath.row)
         
         let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
         
