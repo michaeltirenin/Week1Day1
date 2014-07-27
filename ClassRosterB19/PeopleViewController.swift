@@ -11,6 +11,7 @@ import UIKit
 class PeopleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var people = Person.arrayOfPersonsFromPList()
+//    var newImage = UIImage()
     
     @IBOutlet var tableView: UITableView! // possible bug in beta4 - had to declare as strong
     // optional since not set immediately
@@ -82,11 +83,14 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 //        cell.imageView.image = UIImage(named: "miketirenin")
 //        cell.imageView.image = UIImage(named: personForRow.imageName)
         
-        if personForRow.imageName == "" {
-            cell.pictureImageView.image = UIImage(named: "blankface.png")
-        } else {
-            cell.pictureImageView.image = UIImage(named: personForRow.imageName)
-        }
+//        if personForRow.imageName == "" {
+//            cell.pictureImageView.image = UIImage(named: "blankface")
+//        } else {
+//            cell.pictureImageView.image = personForRow.picture
+//        }
+        
+        cell.pictureImageView.image = personForRow.picture
+
         
         cell.pictureImageView.layer.cornerRadius = 10
         cell.pictureImageView.layer.masksToBounds = true

@@ -18,6 +18,8 @@ class Person : NSObject {
     
     var twitterHandle : String
     var githubHandle : String
+
+    var picture : UIImage
     
     init(firstName : String, lastName : String, imageName : String, twitterHandle : String, githubHandle : String) {
         
@@ -26,6 +28,8 @@ class Person : NSObject {
         self.imageName = imageName
         self.twitterHandle = twitterHandle
         self.githubHandle = githubHandle
+
+        self.picture = UIImage(named: imageName)
         
         // this isn't necessary (to init) since it either takes a value or is nil
         // self.picture = picture

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import AssetsLibrary
 
 class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITraitEnvironment {
 
@@ -36,10 +37,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         if person.imageName == "" {
             pictureImageView.image = UIImage(named: "blankface")
+            person.imageName = "blankface"
         } else {
-            pictureImageView.image = UIImage(named: person.imageName)
+            pictureImageView.image = person.picture
         }
-        
+
         twitterHandleTextField.text = person.twitterHandle
         githubHandleTextField.text = person.githubHandle
     }
@@ -64,7 +66,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         person.lastName = lastNameTextField.text
         person.twitterHandle = twitterHandleTextField.text
         person.githubHandle = githubHandleTextField.text
-//        person.imageName = pictureImageView.image
+        
+//        if person.imageName == "blankface" {
+//            person.picture = UIImage(named: "blankface")
+//        } else {
+//            person.picture = pictureImageView.image
+//        }
+        
+        person.picture = pictureImageView.image
+        
+        println(person.imageName)
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {
@@ -136,8 +147,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
 //        println("did finish picking")
         var pickedImage = info[UIImagePickerControllerOriginalImage] as UIImage
-//        pictureImageView.image = UIImage(named: pickedImage)
         pictureImageView.image = pickedImage
+        person.picture = pickedImage
+        UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

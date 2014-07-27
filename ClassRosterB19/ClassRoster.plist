@@ -34,9 +34,9 @@
 		<key>imageName</key>
 		<string>johnclem</string>
 		<key>twitterHandle</key>
-		<string>@johnclem</string>
+		<string>@johnnyclem</string>
 		<key>githubHandle</key>
-		<string>johnclem</string>
+		<string>johnnyclem</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -58,9 +58,9 @@
 		<key>imageName</key>
 		<string>danhoang</string>
 		<key>twitterHandle</key>
-		<string>@danhoang</string>
+		<string>@danthephoenix7</string>
 		<key>githubHandle</key>
-		<string>danhoang</string>
+		<string>thesubway</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -108,7 +108,7 @@
 		<key>twitterHandle</key>
 		<string>@kirbyshabaga</string>
 		<key>githubHandle</key>
-		<string>kirbyshabaga</string>
+		<string>kirby</string>
 	</dict>
 	<dict>
 		<key>firstName</key>

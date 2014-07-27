@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26AA6EF1982F8AC008D6A57 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26AA6EE1982F8AC008D6A57 /* AssetsLibrary.framework */; };
 		F2910DFD197D877A00EBA181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910DFC197D877A00EBA181 /* AppDelegate.swift */; };
 		F2910DFF197D877A00EBA181 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2910DFE197D877A00EBA181 /* PeopleViewController.swift */; };
 		F2910E02197D877A00EBA181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2910E00197D877A00EBA181 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F26AA6EE1982F8AC008D6A57 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F2910DF7197D877A00EBA181 /* ClassRosterB19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterB19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2910DFB197D877A00EBA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2910DFC197D877A00EBA181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26AA6EF1982F8AC008D6A57 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 		F2910DEE197D877A00EBA181 = {
 			isa = PBXGroup;
 			children = (
+				F26AA6EE1982F8AC008D6A57 /* AssetsLibrary.framework */,
 				F2910DF9197D877A00EBA181 /* ClassRosterB19 */,
 				F2910E0C197D877A00EBA181 /* ClassRosterB19Tests */,
 				F2910DF8197D877A00EBA181 /* Products */,
