@@ -17,11 +17,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet weak var twitterHandleTextField: UITextField!
     @IBOutlet weak var githubHandleTextField: UITextField!
     
-    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var pictureButton: UIButton!
     
 // outlets of constraints; used to split view (move objects) in landscape mode
     @IBOutlet weak var firstNameCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageButtonCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageButtonTopConstraint: NSLayoutConstraint!
+//
     @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     
@@ -36,14 +39,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         lastNameTextField.text = person.lastName
         
         if person.imageName == "" {
-            pictureImageView.image = UIImage(named: "blankface")
+//            pictureImageView.image = UIImage(named: "blankface")
+            pictureButton.setBackgroundImage(UIImage(named: "blankface"), forState: .Normal)
             person.imageName = "blankface"
         } else {
-            pictureImageView.image = person.picture
+//            pictureImageView.image = person.picture
+            pictureButton.setBackgroundImage(person.picture, forState: .Normal)
         }
 
         twitterHandleTextField.text = person.twitterHandle
         githubHandleTextField.text = person.githubHandle
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,10 +61,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 //       self.pictureImageView!.layer.cornerRadius = 0.5 * self.pictureImageView!.frame.width
-        self.pictureImageView!.layer.cornerRadius = 10
-        self.pictureImageView!.layer.masksToBounds = true
-        self.pictureImageView!.layer.borderWidth = 1.5
-        self.pictureImageView!.layer.borderColor = UIColor.grayColor().CGColor
+        self.pictureButton.layer.cornerRadius = 10
+        self.pictureButton.layer.masksToBounds = true
+        self.pictureButton.layer.borderWidth = 1.5
+        self.pictureButton.layer.borderColor = UIColor.grayColor().CGColor
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -66,16 +73,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         person.lastName = lastNameTextField.text
         person.twitterHandle = twitterHandleTextField.text
         person.githubHandle = githubHandleTextField.text
-        
-//        if person.imageName == "blankface" {
-//            person.picture = UIImage(named: "blankface")
-//        } else {
-//            person.picture = pictureImageView.image
-//        }
-        
-        person.picture = pictureImageView.image
-        
-        println(person.imageName)
+//        person.picture = pictureImageView.image
+        person.picture = pictureButton.backgroundImageForState(.Normal)
+
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {
@@ -134,6 +134,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
+    @IBAction func editPictureButton(sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
     @IBAction func showImagePickerBarButton(sender: UIBarButtonItem) {
         
         let picker = UIImagePickerController()
@@ -147,7 +156,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
 //        println("did finish picking")
         var pickedImage = info[UIImagePickerControllerOriginalImage] as UIImage
-        pictureImageView.image = pickedImage
+//        pictureImageView.image = pickedImage
+        pictureButton.setBackgroundImage(pickedImage, forState: .Normal)
         person.picture = pickedImage
         UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
         
@@ -158,28 +168,26 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-// used to translate items via constraint constants
+// used to translate objects via constraint constants
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
 //        println(self.traitCollection.verticalSizeClass.toRaw())
         
-//        println(self.imageViewTopConstraint.constant) // used as 'return to compact state' value
-//        println(self.imageViewCenterConstraint.constant)
-//        println(self.firstNameCenterConstraint.constant)
+//        println(self.imageButtonTopConstraint.constant) // used as 'return to compact state' value
+//        println(self.imageButtonCenterConstraint.constant)
 //        println(self.firstNameTopConstraint.constant)
+//        println(self.firstNameCenterConstraint.constant)
 
         if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
-            
-            self.imageViewTopConstraint.constant = 50.0
-            self.imageViewCenterConstraint.constant = 130
-            self.firstNameCenterConstraint.constant = -90
+            self.imageButtonTopConstraint.constant = 50
+            self.imageButtonCenterConstraint.constant = 130
             self.firstNameTopConstraint.constant = 35
+            self.firstNameCenterConstraint.constant = -90
             
         } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
-            
-            self.imageViewTopConstraint.constant = 19
-            self.imageViewCenterConstraint.constant = 0
-            self.firstNameCenterConstraint.constant = 0
+            self.imageButtonTopConstraint.constant = 19
+            self.imageButtonCenterConstraint.constant = 0
             self.firstNameTopConstraint.constant = 176
+            self.firstNameCenterConstraint.constant = 0
         }
     }
 }

@@ -80,18 +80,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         let personForRow = people[indexPath.row]
         cell.firstNameLabel.text = personForRow.firstName
         cell.lastNameLabel.text = personForRow.lastName
-//        cell.imageView.image = UIImage(named: "miketirenin")
-//        cell.imageView.image = UIImage(named: personForRow.imageName)
-        
-//        if personForRow.imageName == "" {
-//            cell.pictureImageView.image = UIImage(named: "blankface")
-//        } else {
-//            cell.pictureImageView.image = personForRow.picture
-//        }
         
         cell.pictureImageView.image = personForRow.picture
 
-        
         cell.pictureImageView.layer.cornerRadius = 10
         cell.pictureImageView.layer.masksToBounds = true
         cell.pictureImageView.layer.borderWidth = 1.2
