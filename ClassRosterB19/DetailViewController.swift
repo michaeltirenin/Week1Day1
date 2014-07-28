@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import AssetsLibrary
 
 class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITraitEnvironment {
 
@@ -24,9 +23,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageButtonCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageButtonTopConstraint: NSLayoutConstraint!
-//
-    @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     
     var person : Person!
     
@@ -39,28 +35,23 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         lastNameTextField.text = person.lastName
         
         if person.imageName == "" {
-//            pictureImageView.image = UIImage(named: "blankface")
             pictureButton.setBackgroundImage(UIImage(named: "blankface"), forState: .Normal)
             person.imageName = "blankface"
         } else {
-//            pictureImageView.image = person.picture
             pictureButton.setBackgroundImage(person.picture, forState: .Normal)
         }
 
         twitterHandleTextField.text = person.twitterHandle
         githubHandleTextField.text = person.githubHandle
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//       self.pictureImageView!.layer.cornerRadius = 0.5 * self.pictureImageView!.frame.width
+//       self.pictureButton.layer.cornerRadius = 0.5 * self.pictureButton.frame.width // circular frame example
         self.pictureButton.layer.cornerRadius = 10
         self.pictureButton.layer.masksToBounds = true
         self.pictureButton.layer.borderWidth = 1.5
@@ -73,9 +64,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         person.lastName = lastNameTextField.text
         person.twitterHandle = twitterHandleTextField.text
         person.githubHandle = githubHandleTextField.text
-//        person.picture = pictureImageView.image
         person.picture = pictureButton.backgroundImageForState(.Normal)
-
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {
@@ -144,7 +133,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
     
     @IBAction func showImagePickerBarButton(sender: UIBarButtonItem) {
-        
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -154,9 +142,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
-//        println("did finish picking")
         var pickedImage = info[UIImagePickerControllerOriginalImage] as UIImage
-//        pictureImageView.image = pickedImage
         pictureButton.setBackgroundImage(pickedImage, forState: .Normal)
         person.picture = pickedImage
         UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
@@ -168,7 +154,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-// used to translate objects via constraint constants
+    // used to translate objects via constraint constants
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
 //        println(self.traitCollection.verticalSizeClass.toRaw())
         
@@ -182,7 +168,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             self.imageButtonCenterConstraint.constant = 130
             self.firstNameTopConstraint.constant = 35
             self.firstNameCenterConstraint.constant = -90
-            
         } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
             self.imageButtonTopConstraint.constant = 19
             self.imageButtonCenterConstraint.constant = 0

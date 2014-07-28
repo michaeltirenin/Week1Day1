@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        
         let nav = UINavigationController(rootViewController: self.window!.rootViewController)
         self.window!.rootViewController = nav
         

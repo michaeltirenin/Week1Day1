@@ -11,21 +11,9 @@ import UIKit
 class PeopleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var people = Person.arrayOfPersonsFromPList()
-//    var newImage = UIImage()
     
-    @IBOutlet var tableView: UITableView! // possible bug in beta4 - had to declare as strong
+    @IBOutlet var tableView: UITableView! // possible bug in beta4? - had to declare as strong
     // optional since not set immediately
-    
-    @IBAction func addPersonBarButtonItem(sender: UIBarButtonItem) {
-
-        let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
-
-        let newPerson = Person(firstName: "", lastName: "", imageName: "", twitterHandle: "", githubHandle: "")
-        people.append(newPerson)
-        detail.person = newPerson
-
-        self.navigationController.pushViewController(detail, animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +23,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         tableView?.reloadData()
         
         navigationItem.title = "Class Roster"
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addPersonBarButtonItem") // action refers to method name
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,13 +35,12 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
+    // not used; plist used instead
 //    var classRoster = []
 //
 //    func arrayOfPersons() {
-//        
 //        let person1 = Person(firstName: "Victor", lastName: "Adu")
 //        let person2 = Person(firstName: "Collin", lastName: "Atherton")
 //        let person3 = Person(firstName: "John", lastName: "Clem")
@@ -67,22 +57,20 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 ////        println(classRoster)
 //    }
     
-    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        
         return people.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonTableViewCell
-        
         let personForRow = people[indexPath.row]
+        
         cell.firstNameLabel.text = personForRow.firstName
         cell.lastNameLabel.text = personForRow.lastName
         
         cell.pictureImageView.image = personForRow.picture
 
+        // sets image view properties; best place to put this?
         cell.pictureImageView.layer.cornerRadius = 10
         cell.pictureImageView.layer.masksToBounds = true
         cell.pictureImageView.layer.borderWidth = 1.2
@@ -94,13 +82,12 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    // segues removed; see below
 //    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        
 //        if segue.identifier == "ShowDetail" {
 //            let destination = segue.destinationViewController as DetailViewController
 //            destination.person = people[tableView!.indexPathForSelectedRow().row]
 ////            println(tableView!.indexPathForSelectedRow().row)
-//
 //        } else if segue.identifier == "ShowNewPerson" {
 //            let destination = segue.destinationViewController as DetailViewController
 //            let newPerson = Person(firstName: "", lastName: "", imageName: "", twitterHandle: "", githubHandle: "")
@@ -109,9 +96,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 //        }
 //    }
     
+    // used instead of segues/prepareForSegue:
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 //        println(indexPath.row)
-        
         let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
         
         detail.person = self.people[indexPath.row]
@@ -119,5 +106,43 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         if self.navigationController {
             self.navigationController.pushViewController(detail, animated: true)
         }
+    }
+    
+//    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
+    
+    // Tableview editing (from Apple's doc); this wouldn't be necessary if UITableViewVC was used instead
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        tableView.setEditing(editing, animated: true)
+    }
+    
+    // Override to support editing the table view
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            people.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    // Override to support rearranging the table view.
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath:NSIndexPath) {
+        var cellToMove = people[sourceIndexPath.row]
+        people.removeAtIndex(sourceIndexPath.row)
+        people.insert(cellToMove, atIndex: destinationIndexPath.row)
+    }
+    
+    func addPersonBarButtonItem() {
+        let detail = self.storyboard.instantiateViewControllerWithIdentifier("detail") as DetailViewController
+        
+        let newPerson = Person(firstName: "", lastName: "", imageName: "", twitterHandle: "", githubHandle: "")
+        people.append(newPerson)
+        detail.person = newPerson
+        
+        self.navigationController.pushViewController(detail, animated: true)
     }
 }

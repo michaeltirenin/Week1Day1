@@ -87,15 +87,9 @@
                             <constraint firstItem="IqP-nC-3SM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gDY-ed-qc1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E53-Lt-f12">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="T1w-2b-4tw">
-                            <connections>
-                                <action selector="addPersonBarButtonItem:" destination="BYZ-38-t0r" id="qRP-m8-FEL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="E53-Lt-f12"/>
                     <connections>
-                        <outlet property="tableView" destination="IqP-nC-3SM" id="SRZ-Ce-ik4"/>
+                        <outlet property="tableView" destination="IqP-nC-3SM" id="WsE-94-Pna"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
