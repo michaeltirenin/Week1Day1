@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         let nav = UINavigationController(rootViewController: self.window!.rootViewController)
         self.window!.rootViewController = nav
+
+//        if UIUserInterfaceIdiom() == UIUserInterfaceIdiom.Pad {
+//            
+//        }
+//        
+//        let splitVC = UISplitViewController()
+//        splitVC.viewControllers = [firstVC, secondVC]
         
         return true
     }
@@ -41,7 +48,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

@@ -106,6 +106,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
 // variation of above
 //        UIView.animateWithDuration(0.3) {
 //            self.view.bounds = CGRect(x: 0, y: 0, width: currentWidth, height: currentHeight)
+// or try
+//            self.view.bounds = CGRect(origin: CGPointZero, size: self.view.bounds.size) // reset
 //        }
     }
     
