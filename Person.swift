@@ -41,11 +41,11 @@ class Person : NSObject {
         
         for object in classRosterFromPList {
             if let person = object as? Dictionary<String, String> {
-                let firstName = person["firstName"] as String
-                let lastName = person["lastName"] as String
-                let imageName = person["imageName"] as String
-                let twitterHandle = person["twitterHandle"] as String
-                let githubHandle = person["githubHandle"] as String
+                let firstName = person["firstName"] as String!
+                let lastName = person["lastName"] as String!
+                let imageName = person["imageName"] as String!
+                let twitterHandle = person["twitterHandle"] as String!
+                let githubHandle = person["githubHandle"] as String!
                 
                 roster.append(Person(firstName: firstName, lastName: lastName, imageName: imageName, twitterHandle: twitterHandle, githubHandle: githubHandle))
             }

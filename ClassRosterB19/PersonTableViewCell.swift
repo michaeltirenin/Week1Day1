@@ -15,10 +15,11 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var twitterHandleLabel: UILabel!
     @IBOutlet weak var githubHandleLabel: UILabel!
-    
-    init(style: UITableViewCellStyle, reuseIdentifier: String) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
+
+// beta5 update - remove
+//    init(style: UITableViewCellStyle, reuseIdentifier: String) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
